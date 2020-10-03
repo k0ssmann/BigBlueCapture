@@ -1,0 +1,26 @@
+# Configuration file for BigBlueCaptor
+
+[general]
+visibility = 0 # Hide or show recording window. Requires Xephyr.
+resolution = [1366, 768] # Display resolution 
+fps = 30 # Frames per second
+name = "Adrian Kossmann"
+
+[sessions]
+
+    [sessions.Kognition]
+    url = "https://webroom.hrz.tu-chemnitz.de/gl/adr-jqu-tt9"
+    day = "sat"
+    time = "23:55"
+    duration = 12 # in seconds
+    prefix = "kognition"
+    saveDir = ""
+    
+    [sessions.Neuro]
+    url = "https://webroom.hrz.tu-chemnitz.de/gl/adr-jqu-tt9"
+    day = "sat"
+    time = "23:57"
+    duration = 12
+    prefix = "neuro"
+    saveDir = ""
+    
