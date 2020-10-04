@@ -5,8 +5,7 @@ BigBlueCapture is a tool for automated and scheduled joining and recording of Bi
 # Getting started
 
 Get the latest version of BigBlueCapture by cloning it 
-```git clone git@github.com:k0ssmann/BigBlueCapture.git 
-```
+```git clone git@github.com:k0ssmann/BigBlueCapture.git ```
 modify `conf.toml` after your needs and run `python BigBlueCapture.py`.
 
 ## Usage
