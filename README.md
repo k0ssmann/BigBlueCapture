@@ -52,4 +52,10 @@ BigBlueCapture requires the following python-packages:
 ### Known Issues
 
 * Sounds outside the virtual display are recorded, too. 
+* Currently only works for BBB Greenlight
+* Doesn't work if a password required
 
+### TODO
+
+* Add support for BBB applications other than Greenlight
+* Add support for password requests
