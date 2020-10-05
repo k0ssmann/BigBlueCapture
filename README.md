@@ -9,11 +9,11 @@ Get the latest version of BigBlueCapture by cloning it
 clone git@github.com:k0ssmann/BigBlueCapture.git 
 ```
 
-modify `conf.toml` after your needs and run `python BigBlueCapture.py`.
+modify `config.toml` after your needs and run `python BigBlueCapture.py`.
 
 ## Usage
 
-Configuring and adding of BigBlueButton sessions is done in the `conf.toml`.
+Configuring and adding of BigBlueButton sessions is done in the `config.toml`.
 
 ### General options
     
@@ -26,6 +26,7 @@ Configuring and adding of BigBlueButton sessions is done in the `conf.toml`.
 BigBlueButton sessions can be added by adding them to the sessions section. Add a new subsection `sessions.$Session` where `$Session` is the name of a BigBlueButton session with following options
 
     - url: url of BigBlueButton session
+    - accessCode: access code for a BigBlueButton session
     - day: the day session should be recorded. Can take the values `mon`,`tue`,`wed`,`thu`,`fri`,`sat` or `sun`.
     - time: the time session should be recorded in the format `HH:MM`
     - duration: how long a session should be recorded in seconds.
@@ -41,6 +42,7 @@ BigBlueButton sessions can be added by adding them to the sessions section. Add 
 * python >= 3.6
 * xvfb
 * xserver-xephyr (optional)
+* ffmpeg
 
 BigBlueCapture requires the following python-packages:
 
@@ -52,10 +54,9 @@ BigBlueCapture requires the following python-packages:
 ### Known Issues
 
 * Sounds outside the virtual display are recorded, too. 
-* Currently only works for BBB Greenlight
-* Doesn't work if a password required
+* Currently only works for Greenlight
 
 ### TODO
 
 * Add support for BBB applications other than Greenlight
-* Add support for password requests
+

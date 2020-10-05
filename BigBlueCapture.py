@@ -36,9 +36,20 @@ def record(general, duration, did, ext):
     
 
 def run(general, session, did):
+    """ Open the browser, insert access code (if given), 
+        insert name, join session and start recording.
+    """
+    
     url = session['url']
+        
     browser = Browser()
+    browser.driver.maximize_window()
     browser.visit(session['url'])
+    
+    if "accessCode" in session: # Insert access code
+        browser.fill('room[access_code]', session['accessCode'])
+        browser.find_by_xpath('/html/body/div[2]/div[2]/div/div[2]/div[2]/form/div/input[2]').click()
+        
     idx = url.find('/gl/') # BBB Greenlight
     fname = url[idx:len(url)] + "[join_name]"
     browser.fill(fname, general['name'])
